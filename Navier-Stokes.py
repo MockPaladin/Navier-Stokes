@@ -15,8 +15,8 @@ dx = x[1] - x[0]
 dy = y[1] - y[0]
 dt = t[1] - t[0]
 
-dudt = np.gradient(U, dt, axis=2)
-dvdt = np.gradient(V, dt, axis=2)
+dudt = np.gradient(U, dt, axis=-1)
+dvdt = np.gradient(V, dt, axis=-1)
 dudy, dudx = np.gradient(U, dy, dx, axis=(0,1))
 dvdy, dvdx = np.gradient(V, dy, dx, axis=(0,1))
 
