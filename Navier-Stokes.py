@@ -1,10 +1,11 @@
 from scipy.integrate import odeint # type: ignore
 import matplotlib.pyplot as plt # type: ignore
 import numpy as np # type: ignore
+import os
 
-x = np.linspace(-5, 5, 50)
-y = np.linspace(-5, 5, 50)
-t = np.linspace(0, 1, 10)
+x = np.linspace(-5, 5, 25)
+y = np.linspace(-5, 5, 25)
+t = np.linspace(0, 100, 10)
 
 X, Y, T = np.meshgrid(x, y, t)
 
@@ -26,10 +27,11 @@ conv_v = U * dudx * dudy
 DuDt = dudt + conv_u
 DvDt = dvdt + conv_v
 
-time = 1 # only works in [0, 1]
+for time in range(0, 10):
 
-plt.quiver(X[:, :, time], Y[:, :, time], DuDt[:, :, time], DvDt[:, :, time])
+    plt.quiver(X[:, :, time], Y[:, :, time], DuDt[:, :, time], DvDt[:, :, time])
 
-plt.xlabel('x')
-plt.ylabel('y')
-plt.show()
+    plt.xlabel('x')
+    plt.ylabel('y')
+    plt.title(f'Plot at t={time}')
+    plt.savefig(os.path.join('images', f't{time}.png'))
