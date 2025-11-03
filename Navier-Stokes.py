@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt # - Plotting - #
 from matplotlib.animation import FuncAnimation, PillowWriter # - FuncAnimation for animating, PillowWriter for exporting the animation as a .gif - #
-import numpy as np # type: ignore
+import numpy as np
 
 # - Create a set of numbers for vectors - #
 x = np.linspace(-5, 5, 25)
