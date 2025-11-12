@@ -14,4 +14,4 @@ $$\frac{\partial}{\partial t}(\rho\textbf{u}+\nabla\cdot(\rho\textbf{u}\otimes\t
 giving
 $$\frac{\partial}{\partial t}(\rho\textbf{u})+\nabla\cdot\left[\rho\textbf{u}\otimes\textbf{u}+[p-\zeta(\nabla\cdot\textbf{u})]\textbf{I}-\mu^\dagger\right]=\rho\textbf{a}.$$
 Another equation we can use, due to how the Millenium Prize Problem only accounts for <i>incompressible</i> fluids is
-$$\nabla\cdot u=\frac{\partial u_x}{\partial x}+\frac{\partial u_y}{\partial y}+\frac{\partial u_z}{\partial z}$$
+$$\nabla\cdot u=\frac{\partial u_x}{\partial x}+\frac{\partial u_y}{\partial y}+\frac{\partial u_z}{\partial z}=0$$
